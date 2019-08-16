@@ -14,6 +14,9 @@ Set your status to Away or Offline, or change the redirect from Web to Phone wit
 This repository is purposefully public.
 
 ## Screenshots 
-![](assets/talk1.PNG) ![](assets/talk2.PNG) ![](assets/talk3.PNG) ![](assets/talk4.PNG)
+
+| ![](assets/talk1.PNG)  |  ![](assets/talk2.PNG) |
+|  ![](assets/talk3.PNG) |  ![](assets/talk4.PNG) |
+
 
 
