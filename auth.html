@@ -1,0 +1,61 @@
+<script>
+token = "";
+function init() {
+	var url = window.location.href;
+	var subdomain = readUrlParam(url, 'subdomain');
+	console.log(subdomain);
+	if (url.indexOf('https://talk.premiumplus.io/auth.html') !== -1) {
+		if (url.indexOf('access_token=') !== -1) {
+			var access_token = readUrlParam(url, 'access_token');
+			token = access_token;
+			localStorage.setItem('zauth', access_token);
+			localStorage.setItem('zdomain', subdomain);
+			window.location.hash = "";
+			console.log(access_token+"auth001");
+			window.opener.postMessage(access_token, "https://talk.premiumplus.io/index.html");
+
+		}
+		if (url.indexOf('error=') !== -1) {
+			var error_desc = readUrlParam(url, 'error_description');
+			var msg = 'Authorization error: ' + error_desc;
+			showError(msg);
+		}
+	}
+	if (localStorage.getItem('zauth')) {
+		var access_token = localStorage.getItem('zauth');
+		token = access_token;
+		console.log(access_token+"auth002");
+		window.opener.postMessage(access_token, "https://talk.premiumplus.io/index.html");
+	} else {
+		console.log("auth003");
+		startAuthFlow(subdomain);
+	}
+}
+
+function startAuthFlow(subdomain) {
+	var endpoint = 'https://' + subdomain + '.zendesk.com/oauth/authorizations/new';
+	var url_params = '?' +
+	'response_type=token' + '&' +
+	'redirect_uri=https://talk.premiumplus.io/auth.html' + '&' +
+	'client_id=talk_status' + '&' +
+	'scope=' + encodeURIComponent('read write');
+	window.location.href = endpoint + url_params;
+}
+
+function readUrlParam(url, param) {
+	param += '=';
+	if (url.indexOf(param) !== -1) {
+		var start = url.indexOf(param) + param.length;
+		var value = url.substr(start);
+		if (value.indexOf('&') !== -1) {
+			var end = value.indexOf('&');
+			value = value.substring(0, end);
+		}
+		return value;
+	} else {
+		return false;
+	}
+}
+
+window.addEventListener('load', init, false);
+</script>

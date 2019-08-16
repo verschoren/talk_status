@@ -1,0 +1,87 @@
+<html>
+<head>
+<!--code by Thomas Verschoren -->
+	<meta charset="utf-8">
+	<link rel="apple-touch-icon" href="https://garden.zendesk.com/favicons/talk/apple-touch-icon.png">
+	<link rel="icon" href="https://garden.zendesk.com/favicons/talk/mask-icon.svg">
+
+	<title>Talk Status</title>
+	<meta content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="stylesheet" href="style.css?20190321" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="main.js?20190321"></script>
+</head>
+<body>
+	<div id=icon>
+		<a onclick="init();">
+			<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" focusable="false" viewBox="0 0 26 26">
+				<path fill="#FFF" d="M6.8 3.3C3.4 3.3.6 6.5.6 9.5H13c0-3-2.8-6.2-6.2-6.2z"/>
+				<path fill="#FFF" d="M14.9 23.2c5.8 0 10.5-4.1 10.5-10.5H4.3c0 6.4 4.8 10.5 10.6 10.5z"/>
+			</svg>
+		</a>
+	</div>
+	<div id="status_text">
+		<h1>
+			Hey <span id="user_name"></span>,<br><br>
+			Your <strong>Zendesk Talk account</strong> is <span id="status_talk"></span><br>
+			<span id="via_talk"></span>
+		</h1>
+	</div>
+	<div id="login_text">
+		<h1>
+			Please login using<br>
+			your <strong>Zendesk</strong><br>
+			email and password
+		</h1>
+		<p class="disclaimer">
+			You currently can't login with Google Auth.
+			<br><br>
+			<em><a href="https://premiumplus.io/talk-status" style="color:white;">More Info</a></em>
+<!-- 			<em>You can add this web site to <br>your homescreen as an app.</em> -->
+		</p>
+	</div>
+	<div id="buy_text">
+		<h1>
+			Sorry,
+			with our free version <br>
+			you can only set your status to offline.
+		</h1>
+		<p>
+			Go to our site to purchase the full version.
+		</p>
+	</div>
+	<div id="info_text">
+		<h1>
+			Info
+		</h1>
+		<p>
+			<strong>Token</strong><br>
+			<span id="token_info"></span><br>
+			<br>
+			<strong>Domain</strong><br>
+			<span id="domain_info"></span>
+			<br><br><br>
+		</p>
+	</div>
+	<div id="buttons">
+		<a class="togglebutton red" id="offline" onclick="toggle('offline');">Offline</a>
+		<a class="togglebutton orange" id="away" onclick="toggle('away');">I'm Away</a>
+		<a class="togglebutton" id="client_change" onclick="toggle('client');">Change to Browser</a>
+		<a class="togglebutton" id="phone_change" onclick="toggle('phone');">Change to Phone</a>
+		<a class="togglebutton" id="client_online" onclick="toggle('client');">Online via Browser</a>
+		<a class="togglebutton" id="phone_online" onclick="toggle('phone');">Online via Phone</a>
+		<a class="togglebutton" id="reset" onclick="init();">Go Back</a>
+		<a class="togglebutton" id="buy" href="https://premiumplus.io/shop/talk_status" target="_blank"">Buy Full Version</a>
+		<a class="togglebutton" id="resetLogin" onclick="setButtons('login','');">Go Back</a>
+		<a class="togglebutton red" id="logout" onclick="deleteToken();">Log Out</a>
+	</div>
+	<div class="bottom">
+		<form id="loginform" onclick='init();'>
+			<input type="text" id="subdomain" placeholder="subdomain"><span class="zendesk" autocapitalize="none">.zendesk.com</span>
+		</form>
+		<a class="togglebutton login" id="login" onclick='init();'>Login</a><br>
+		<p class="small">Powered by <a href="https://premiumplus.io/" target="_blank">premiumplus.io</a> - <a onclick="getInfo();">Info</a><p>
+	</div>
+</body>

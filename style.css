@@ -1,0 +1,205 @@
+body{
+/* 
+	background-color: #1F73B7;
+ */
+	background: linear-gradient(-45deg, #1F73B7, #1F73B7, #004084, #004084);
+	text-align: center;
+	margin: 8px;
+	margin-top:75px;
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif;
+	background-size: 200% 200%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	margin-bottom: -44px;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 32px;
+}
+
+p {
+	padding-top: 30px;
+	color: #FFFFFF;
+}
+
+.togglebutton {	
+	display: none;
+	margin: 0 auto;
+	transition: border-color .25s ease-in-out,box-shadow .1s ease-in-out,background-color .25s ease-in-out,color .25s ease-in-out;
+	border: 2px solid #2F3941;
+	border-radius: 4px;
+	background-color: white;
+	cursor: pointer;
+	padding: 8px;
+	min-width: 8.57143em;
+	overflow: hidden;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	line-height: 26px;
+	white-space: nowrap;
+	color: #2F3941;
+	font-size: 26px;
+	font-weight: 400;
+	-webkit-font-smoothing: subpixel-antialiased;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 300px;
+	margin-bottom: 30px;
+}
+
+.togglebutton:hover {	
+	background-color: #2F3941;
+	color: #FFF;
+}
+
+.red {	
+	border: 2px solid #EB4962;
+	background-color: white;
+	color: #EB4962;
+}
+
+.red:hover {	
+	background-color: #EB4962;
+	color: #FFF;
+}
+
+.orange {	
+	border: 2px solid #F79A3E;
+	background-color: white;
+	color: #F79A3E;
+}
+
+.orange:hover {	
+	background-color: #F79A3E;
+	color: #FFF;
+}
+
+
+#login_text {
+	display: block;
+}
+
+#status_text {
+	display: none;
+}
+
+#buy_text{
+	display:none;
+}
+
+#info_text {
+	display:none;
+}
+
+.disclaimer {
+	margin: 0px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.bottom{
+	display: block;
+    position:absolute;
+    bottom:10px;
+    width: 100%;
+    margin-left: -10px;
+}
+
+.login {
+	display: block;
+    position:absolute;
+    left:50%;
+    margin-left: -150px;
+    bottom: 40px;
+}
+
+.small {
+	margin: 0px;
+	text-align: center;
+	font-size: 12px;
+    position: absolute;
+	bottom: 10px;
+    left:50%;
+    margin-left: -150px;
+	width: 300px;	
+}
+
+.small a {
+	color: #FFF;
+}
+
+form {
+	display: block;
+    position:absolute;
+    left:50%;
+    margin-left: -150px;
+    bottom: 120px;
+    width: 100%;
+    max-width: 300px;
+}
+
+input{
+	width: 180px;
+	float:left;
+	border: 2px solid #2F3941;
+	border-radius: 4px;
+	background-color: white;
+	padding: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+	line-height: 18px;
+	white-space: nowrap;
+	color: #2F3941;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.zendesk {
+	width: 110px;
+	float:left;
+	text-align: left;
+	padding: 5px;
+	padding-top: 12px;
+	font-size: 18px;
+}
