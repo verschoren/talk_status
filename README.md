@@ -10,6 +10,10 @@ Set your status to Away or Offline, or change the redirect from Web to Phone wit
 * Set your account to Online or Away
 * Redirect calls to your browser or your mobile phone.
 
+## Public
+This repository is purposefully public.
+
+## Screenshots 
 ![](assets/talk1.PNG) ![](assets/talk2.PNG) ![](assets/talk3.PNG) ![](assets/talk4.PNG)
 
 
