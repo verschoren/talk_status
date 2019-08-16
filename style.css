@@ -12,6 +12,7 @@ body{
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
 	margin-bottom: -44px;
+	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 @-webkit-keyframes Gradient {
