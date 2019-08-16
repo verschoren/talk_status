@@ -17,7 +17,8 @@ This repository is purposefully public.
 
 | login | status |
 | --- | --- |
-| ![](assets/talk4.PNG) | ![](assets/talk3.PNG) || ![](assets/talk1.PNG) | ![](assets/talk2.PNG) |
+| ![](assets/talk4.PNG) | ![](assets/talk3.PNG)|
+| ![](assets/talk1.PNG) | ![](assets/talk2.PNG) |
 
 
 
