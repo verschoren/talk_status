@@ -1,4 +1,3 @@
-// 0a721e7afdf7f944a73b108334a618810e1d9ccb3924ac8822c61543f3c2cfa6
 //global variables
 access_token = "";
 subdomain = "";
