@@ -15,8 +15,10 @@ This repository is purposefully public.
 
 ## Screenshots 
 
-| ![](assets/talk1.PNG)  |  ![](assets/talk2.PNG) |
-|  ![](assets/talk3.PNG) |  ![](assets/talk4.PNG) |
+| screenshot | screenshot |
+| --- | --- |
+| ![](assets/talk1.PNG) | ![](assets/talk2.PNG) |
+| ![](assets/talk3.PNG) | ![](assets/talk4.PNG) |
 
 
 
