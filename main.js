@@ -120,7 +120,7 @@ function resetViews(){
 	$('#buy').hide();
 	$('#logout').hide();
 	$('#resetLogin').hide();
-
+	$('#bugfix').hide();
 	$('#status_text').hide("fade","",500,"");
 	$('#login_text').hide("fade","",500,"");
 	$('#buy_text').hide("fade","",500,"");
@@ -162,6 +162,7 @@ function setButtons(status_talk,via_talk){
 		$('#info_text').show("fade","",500,"");
 		$('#logout').css('display', 'block');
 		$('#resetLogin').css('display', 'block');
+		$('#bugfix').css('display', 'block');
 		setColors("info");
 	}
 	if (status_talk == "login"){
