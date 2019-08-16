@@ -4,7 +4,7 @@
 
 Set your status to Away or Offline, or change the redirect from Web to Phone without logging into the full Zendesk interface.
 
-##Features
+## Features
 * One press status changes
 * Set your account to Offline
 * Set your account to Online or Away
