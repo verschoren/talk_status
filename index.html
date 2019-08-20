@@ -49,8 +49,7 @@
 		<p class="disclaimer">
 			You currently can't login with Google Auth.
 			<br><br>
-			<em><a href="https://github.com/verschoren/talk_status" style="color:white;">More Info</a></em>
-<!-- 			<em>You can add this web site to <br>your homescreen as an app.</em> -->
+ 			<em>You can add this website to <br>your homescreen as an app.</em>
 		</p>
 	</div>
 	<div id="buy_text">
@@ -73,7 +72,15 @@
 			<br>
 			<strong>Domain</strong><br>
 			<span id="domain_info"></span>
-			<br>This website does not store or log any data about your Zendesk account. <br>We use Google Analytics to log traffic.<br><br>
+		</p>
+		<p class="disclaimer">
+			<em>
+				We do not store or log any data about your Zendesk account.
+				<br>We use Google Analytics to log traffic.
+				<br><br>Hosted on GitHub, cached by Cloudflare.
+			</em>
+				<br><br><a id="bugfix" href="https://github.com/verschoren/talk_status/issues" target="_blank" style="color:#FFF; text-decoration:underline">Report a bug</a>
+			<br><br>
 		</p>
 	</div>
 	<div id="buttons">
@@ -86,7 +93,6 @@
 		<a class="togglebutton" id="reset" onclick="init();">Go Back</a>
 		<a class="togglebutton" id="buy" href="https://premiumplus.io/shop/talk_status" target="_blank"">Buy Full Version</a>
 		<a class="togglebutton" id="resetLogin" onclick="setButtons('login','');">Go Back</a>
-		<a class="togglebutton" id="bugfix" href="https://github.com/verschoren/talk_status/issues" target="_blank">Bugs and Issues</a>
 		<a class="togglebutton red" id="logout" onclick="deleteToken();">Log Out</a>
 	</div>
 	<div class="bottom">
